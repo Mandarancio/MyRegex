@@ -23,7 +23,14 @@ Some syntax:
 
 ## Example:
 
-A simple regex to find markdown tables is `\|(>1!\|)\|(#!\n)\n\|(\:|-)(>1-&!((\:|-)\|)\|(#!\n)\n` the code is the following:
+A simple regex to find markdown links is `[(#!])]\((>1!\))\)`. To compile the rule:
+
+```c
+ Regex * r = parse("[(#!])]\\((>1!\)))");
+```
+
+
+A more complex regex to find markdown tables is `\|(>1!\|)\|(#!\n)\n\|(\:|-)(>1-&!((\:|-)\|)\|(#!\n)\n` the code is the following:
 
 ```c
  const char *str = "| A | B |\n"
