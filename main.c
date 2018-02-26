@@ -11,9 +11,8 @@ main (int argc, char **argv)
 
   size_t n = strlen(str);
   printf("<%s> (%lu)\n", str, n);
-  /* \|(>1!\|)\|(#!\n)\n */
   Regex * r = parse("\\|(>1!\\|)\\|(#!\n)\n"
-                    "\\|(\\:|-)(>1-&!((\\:|-)\\|))(\\:|-)\\|(#!\n)\n");
+  "\\|(\\:|-)(>1-&!((\\:|-)\\|))(\\:|-)\\|(#!\n)\n");
   if (!r) {
     fprintf(stderr, "Parse error!");
     return -1;
