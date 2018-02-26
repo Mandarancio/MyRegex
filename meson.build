@@ -7,13 +7,22 @@ project('RegEx', 'c',
 PROJECT_NAME = 'regex'
 
 sources = [
-    'regex.c',
     'main.c'
+]
+
+lib_src = [
+    'regex.c'
 ]
 
 
 executable(
     PROJECT_NAME,
-    sources: [sources],
+    sources: [lib_src, sources],
     install: false
+)
+
+shared_library(
+    PROJECT_NAME,
+    sources: [lib_src],
+    install: true
 )
