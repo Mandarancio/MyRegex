@@ -26,7 +26,7 @@ Some syntax:
 A simple regex to find markdown links is `[(#!])]\((>1!\))\)`. To compile the rule:
 
 ```c
- Regex * r = parse("[(#!])]\\((>1!\)))");
+ Regex * r = parse("[(#!])]\\((>1!\\)))");
 ```
 
 
