@@ -29,6 +29,8 @@ A simple regex to find markdown links is `[(#!])]\((>1!\))\)`. To compile the ru
  Regex * r = parse("[(#!])]\\((>1!\\)))");
 ```
 
+If you want to be sure that is not an image just put `(!\!)` before the previous rule. **Note** that `(!\!)` is equal to `(*&!\!)`.
+
 
 A more complex regex to find markdown tables is `\|(>1!\|)\|(#!\n)\n\|(\:|-)(>1-&!((\:|-)\|)\|(#!\n)\n` the code is the following:
 
